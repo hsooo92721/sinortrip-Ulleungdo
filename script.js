@@ -67,11 +67,11 @@ const foods = [
 ];
 
 const includedItems = [
-  { title: "포항↔울릉도 왕복 쾌속선", image: "./assets/high-speed-ferry.png" },
-  { title: "우리 땅 독도 관광 (선표 포함)", image: "./assets/dokdo-tour.png" },
-  { title: "호텔급 숙소 2박 (4인 1실)", image: "./assets/hotel-room.png" },
-  { title: "A+B코스 관광 (전용버스)", image: "./assets/ab-course-bus.png" },
-  { title: "식사 6식 (특식 5식 포함)", image: "./assets/included-meals.png" },
+  { title: "왕복 쾌속선 <span class="fs14">(포항↔울릉도)</span>", image: "./assets/high-speed-ferry.png" },
+  { title: "우리 땅 독도 관광 <span class="fs14">(선표 포함)</span>", image: "./assets/dokdo-tour.png" },
+  { title: "호텔급 숙소 2박 <span class="fs14">(4인 1실)</span>", image: "./assets/hotel-room.png" },
+  { title: "A+B코스 관광 <span class="fs14">(전용버스)</span>", image: "./assets/ab-course-bus.png" },
+  { title: "식사 6식<span class="fs14">(특식 5식 포함)</span>", image: "./assets/included-meals.png" },
   { title: "시놀 네트워킹 나이트", image: "./assets/networking-card.png" }
 ];
 
