@@ -68,27 +68,33 @@ const foods = [
 
 const includedItems = [
   {
-    title: '왕복 쾌속선 <span class="fs14">(포항↔울릉도)</span>',
+    title: "왕복 쾌속선",
+    meta: "(포항↔울릉도)",
     image: "./assets/high-speed-ferry.png"
   },
   {
-    title: '우리 땅 독도 관광 <span class="fs14">(선표 포함)</span>',
+    title: "우리 땅 독도 관광",
+    meta: "(선표 포함)",
     image: "./assets/dokdo-tour.png"
   },
   {
-    title: '호텔급 숙소 2박 <span class="fs14">(4인 1실)</span>',
+    title: "호텔급 숙소 2박",
+    meta: "(4인 1실)",
     image: "./assets/hotel-room.png"
   },
   {
-    title: 'A+B코스 관광 <span class="fs14">(전용버스)</span>',
+    title: "A+B코스 관광",
+    meta: "(전용버스)",
     image: "./assets/ab-course-bus.png"
   },
   {
-    title: '식사 6식 <span class="fs14">(특식 5식 포함)</span>',
+    title: "식사 6식",
+    meta: "(특식 5식 포함)",
     image: "./assets/included-meals.png"
   },
   {
     title: "시놀 네트워킹 나이트",
+    meta: "",
     image: "./assets/networking-card.png"
   }
 ];
@@ -171,22 +177,38 @@ function renderDays() {
   `).join("");
 }
 
-function renderFoods() {
-  const container = document.querySelector("#foods-list");
-  container.innerHTML = foods.map((food) => `<span class="food-chip">${food}</span>`).join("");
-}
-
 function renderIncludedItems() {
   const container = document.querySelector("#includes-grid");
 
-  container.innerHTML = includedItems.map((item) => `
-    <article class="include-card">
-      ${item.image
-        ? `<img class="include-card__image" src="${item.image}" alt="${item.title}">`
-        : `<div class="include-card__placeholder"><span>사진 자리</span></div>`}
-      <h3 class="include-card__title">${item.title}</h3>
-    </article>
-  `).join("");
+  container.innerHTML = includedItems.map((item) => {
+    const metaHtml = item.meta
+      ? `<span class="fs14">${item.meta}</span>`
+      : "";
+
+    const altText = item.meta
+      ? `${item.title} ${item.meta}`
+      : item.title;
+
+    return `
+      <article class="include-card">
+        ${
+          item.image
+            ? `<img
+                class="include-card__image"
+                src="${item.image}"
+                alt="${altText}"
+              >`
+            : `<div class="include-card__placeholder">
+                <span>사진 자리</span>
+              </div>`
+        }
+
+        <h3 class="include-card__title">
+          ${item.title} ${metaHtml}
+        </h3>
+      </article>
+    `;
+  }).join("");
 }
 
 function renderMembershipBenefits() {
