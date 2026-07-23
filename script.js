@@ -185,14 +185,35 @@ function renderFoods() {
 function renderIncludedItems() {
   const container = document.querySelector("#includes-grid");
 
-  container.innerHTML = includedItems.map((item) => `
-    <article class="include-card">
-      ${item.image
-        ? `<img class="include-card__image" src="${item.image}" alt="${item.title}">`
-        : `<div class="include-card__placeholder"><span>사진 자리</span></div>`}
-      <h3 class="include-card__title">${item.title}</h3>
-    </article>
-  `).join("");
+  container.innerHTML = includedItems.map((item) => {
+    const metaHtml = item.meta
+      ? `<span class="fs14">${item.meta}</span>`
+      : "";
+
+    const altText = item.meta
+      ? `${item.title} ${item.meta}`
+      : item.title;
+
+    return `
+      <article class="include-card">
+        ${
+          item.image
+            ? `<img
+                class="include-card__image"
+                src="${item.image}"
+                alt="${altText}"
+              >`
+            : `<div class="include-card__placeholder">
+                <span>사진 자리</span>
+              </div>`
+        }
+
+        <h3 class="include-card__title">
+          ${item.title} ${metaHtml}
+        </h3>
+      </article>
+    `;
+  }).join("");
 }
 
 function renderMembershipBenefits() {
