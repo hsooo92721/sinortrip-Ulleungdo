@@ -1269,7 +1269,13 @@ p {
   letter-spacing: -0.3px;
   cursor: pointer;
   background: #0d63d6;
-  border: 0;
+  border: 2px solid #0d63d6;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(13, 99, 214, 0.28);
+}
+
+a.booking-button:hover,
+a.booking-button:focus-visible {
+  opacity: 50%;
+  color: #fff;
 }
