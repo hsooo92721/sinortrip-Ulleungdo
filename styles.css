@@ -1260,6 +1260,8 @@ p {
 
 /* 예약 버튼 */
 .booking-button {
+  display: block;
+  text-align: center;
   width: 100%;
   padding: 19px;
   color: #fff;
