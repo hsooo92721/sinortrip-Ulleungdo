@@ -32,7 +32,7 @@ const days = [
       { time: "09:50", title: "쾌속선 출항", description: "약 2시간 50분, 울릉도로 출발해요." },
       { time: "도착", title: "도동항 도착 · 중식 (따개비칼국수)", description: "현지 안내 미팅 후, 울릉도 첫 특식으로 시작해요." },
       { time: "14:00", title: "울릉도 A코스 관광", description: "도동·통구미·거북바위·나리분지 등, 약 4시간." },
-      { time: "저녁", title: "★ 시놀 네트워킹 나이트 (오삼불고기)", description: "첫날 저녁, 어색함을 편함으로. 시놀 회원만의 자리예요.", hot: true }
+      { time: "저녁", title: "★ 시놀 네트워킹 나이트 (오삼불고기)", description: "첫날 저녁, 시놀 회원끼리 편안하게.", hot: true }
     ]
   },
   {
