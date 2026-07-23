@@ -3,17 +3,17 @@ const PARTY_SIZE = 20;
 const benefits = [
   {
     no: "01",
-    title: "포항 도착, 여행 시작!",
-    description: "여객선터미널 집결·선표 수령·승선수속까지 가이드가 챙겨드려요."
+    title: "포항 도착하시면, 그때부터 함께",
+    description: "여객선터미널 집결·선표 수령·승선수속까지 진행자가 처음부터 챙겨드려요."
   },
   {
     no: "02",
     title: "또래 회원과 함께, 안심 동행",
-    description: `비슷한 나이대 ${PARTY_SIZE}명. 낯설지 않게, 가이드가 함께해요.`
+    description: `비슷한 나이대 ${PARTY_SIZE}명. 낯설지 않게, 진행자가 처음부터 끝까지 함께해요.`
   },
   {
     no: "03",
-    title: "리조트 2박을 잡아뒀어요",
+    title: "호텔급 숙소 2박을 잡아뒀어요",
     description: "섬이지만 호텔급 2박. 예약도 자리 배정도 저희가 미리 준비했어요."
   },
   {
@@ -32,7 +32,7 @@ const days = [
       { time: "09:50", title: "쾌속선 출항", description: "약 2시간 50분, 울릉도로 출발해요." },
       { time: "도착", title: "도동항 도착 · 중식 (따개비칼국수)", description: "현지 안내 미팅 후, 울릉도 첫 특식으로 시작해요." },
       { time: "14:00", title: "울릉도 A코스 관광", description: "도동·통구미·거북바위·나리분지 등, 약 4시간." },
-      { time: "저녁", title: "★ 시놀 네트워킹 나이트 (오삼불고기)", description: "첫날 저녁, 시놀 회원끼리 편안하게.", hot: true }
+      { time: "저녁", title: "★ 시놀 네트워킹 나이트 (오삼불고기)", description: "첫날 저녁, 어색함을 편함으로. 시놀 회원만의 자리예요.", hot: true }
     ]
   },
   {
@@ -67,36 +67,12 @@ const foods = [
 ];
 
 const includedItems = [
-  {
-    title: "왕복 쾌속선",
-    meta: "(포항↔울릉도)",
-    image: "./assets/high-speed-ferry.png"
-  },
-  {
-    title: "우리 땅 독도 관광",
-    meta: "(선표 포함)",
-    image: "./assets/dokdo-tour.png"
-  },
-  {
-    title: "호텔급 숙소 2박",
-    meta: "(4인 1실)",
-    image: "./assets/hotel-room.png"
-  },
-  {
-    title: "A+B코스 관광",
-    meta: "(전용버스)",
-    image: "./assets/ab-course-bus.png"
-  },
-  {
-    title: "식사 6식",
-    meta: "(특식 5식 포함)",
-    image: "./assets/included-meals.png"
-  },
-  {
-    title: "시놀 네트워킹 나이트",
-    meta: "",
-    image: "./assets/networking-card.png"
-  }
+  { title: "포항↔울릉도 왕복 쾌속선", image: "./assets/high-speed-ferry.png" },
+  { title: "우리 땅 독도 관광 (선표 포함)", image: "./assets/dokdo-tour.png" },
+  { title: "호텔급 숙소 2박", image: "./assets/hotel-room.png" },
+  { title: "A+B코스 관광 (전용버스)", image: "./assets/ab-course-bus.png" },
+  { title: "식사 6식 (특식 5식 포함)", image: "./assets/included-meals.png" },
+  { title: "시놀 네트워킹 나이트", image: "./assets/networking-card.png" }
 ];
 
 const membershipBenefits = [
@@ -177,38 +153,22 @@ function renderDays() {
   `).join("");
 }
 
+function renderFoods() {
+  const container = document.querySelector("#foods-list");
+  container.innerHTML = foods.map((food) => `<span class="food-chip">${food}</span>`).join("");
+}
+
 function renderIncludedItems() {
   const container = document.querySelector("#includes-grid");
 
-  container.innerHTML = includedItems.map((item) => {
-    const metaHtml = item.meta
-      ? `<span class="fs14">${item.meta}</span>`
-      : "";
-
-    const altText = item.meta
-      ? `${item.title} ${item.meta}`
-      : item.title;
-
-    return `
-      <article class="include-card">
-        ${
-          item.image
-            ? `<img
-                class="include-card__image"
-                src="${item.image}"
-                alt="${altText}"
-              >`
-            : `<div class="include-card__placeholder">
-                <span>사진 자리</span>
-              </div>`
-        }
-
-        <h3 class="include-card__title">
-          ${item.title} ${metaHtml}
-        </h3>
-      </article>
-    `;
-  }).join("");
+  container.innerHTML = includedItems.map((item) => `
+    <article class="include-card">
+      ${item.image
+        ? `<img class="include-card__image" src="${item.image}" alt="${item.title}">`
+        : `<div class="include-card__placeholder"><span>사진 자리</span></div>`}
+      <h3 class="include-card__title">${item.title}</h3>
+    </article>
+  `).join("");
 }
 
 function renderMembershipBenefits() {
