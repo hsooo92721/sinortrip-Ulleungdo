@@ -58,8 +58,33 @@ p {
   margin-top: 0;
 }
 
-fs14 {
+/* 폰트 크기는 아래 5개 클래스에서만 관리 */
+.fs14 {
   font-size: 14px;
+}
+
+.fs16 {
+  font-size: 16px;
+}
+
+.fs18 {
+  font-size: 18px;
+}
+
+.fs24 {
+  font-size: 24px;
+}
+
+.fs30 {
+  font-size: 30px;
+}
+
+.fs40 {
+  font-size: 40px;
+}
+
+.fw300 {
+  font-weight: 300;
 }
 
 .trip-page {
@@ -83,7 +108,6 @@ fs14 {
   padding: 11px 12px;
   overflow: hidden;
   color: #fff;
-  font-size: 12.5px;
   font-weight: 700;
   letter-spacing: -0.3px;
   white-space: nowrap;
@@ -121,13 +145,16 @@ fs14 {
 
 .section--dark {
   color: #fff;
-  background: linear-gradient(180deg, var(--primary-dark) 0%, #0a2447 100%);
+  background: linear-gradient(
+    180deg,
+    var(--primary-dark) 0%,
+    #0a2447 100%
+  );
 }
 
 .section__eyebrow {
   margin-bottom: 14px;
   color: #5b95e0;
-  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.4px;
 }
@@ -140,7 +167,6 @@ fs14 {
 .section__title {
   margin-bottom: 18px;
   color: var(--text-strong);
-  font-size: 24px;
   font-weight: 800;
   line-height: 1.45;
   letter-spacing: -0.4px;
@@ -154,15 +180,9 @@ fs14 {
   color: #fff;
 }
 
-.section__title--large {
-  font-size: 27px;
-  letter-spacing: -0.5px;
-}
-
 .section-copy {
   margin-bottom: 24px;
   color: var(--text-muted);
-  font-size: 16.5px;
   line-height: 1.7;
 }
 
@@ -174,7 +194,6 @@ fs14 {
 .section-note {
   margin: 24px 0 0;
   color: var(--text-light);
-  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -187,7 +206,6 @@ fs14 {
   gap: 6px;
   align-items: center;
   padding: 7px 14px;
-  font-size: 14px;
   font-weight: 700;
   border-radius: 999px;
 }
@@ -208,13 +226,16 @@ fs14 {
 
 .hero {
   padding: 40px 24px 44px;
-  background: linear-gradient(180deg, var(--primary-pale) 0%, var(--primary-soft) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--primary-pale) 0%,
+    var(--primary-soft) 100%
+  );
 }
 
 .hero__title {
   margin-bottom: 18px;
   color: var(--text-strong);
-  font-size: 31px;
   font-weight: 800;
   line-height: 1.42;
   letter-spacing: -0.6px;
@@ -223,7 +244,6 @@ fs14 {
 .hero__summary {
   margin-bottom: 10px;
   color: var(--text);
-  font-size: 17px;
   font-weight: 600;
   line-height: 1.65;
 }
@@ -231,7 +251,6 @@ fs14 {
 .hero__description {
   margin-bottom: 26px;
   color: var(--text-muted);
-  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -276,7 +295,12 @@ fs14 {
 }
 
 .story__overlay {
-  background: linear-gradient(180deg, rgba(13, 45, 95, 0.4) 0%, rgba(13, 45, 95, 0.72) 60%, rgba(13, 45, 95, 0.88) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(13, 45, 95, 0.4) 0%,
+    rgba(13, 45, 95, 0.72) 60%,
+    rgba(13, 45, 95, 0.88) 100%
+  );
 }
 
 .story__content {
@@ -287,7 +311,6 @@ fs14 {
 .story__eyebrow {
   margin-bottom: 18px;
   color: #bfd7f4;
-  font-size: 15px;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -295,7 +318,6 @@ fs14 {
 .story__title {
   margin-bottom: 22px;
   color: #fff;
-  font-size: 30px;
   font-weight: 800;
   line-height: 1.5;
   letter-spacing: -0.5px;
@@ -313,7 +335,6 @@ fs14 {
 .story__copy {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.92);
-  font-size: 17px;
   font-weight: 500;
   line-height: 1.75;
 }
@@ -339,7 +360,6 @@ fs14 {
   margin-bottom: 0;
   padding: 20px 22px;
   color: var(--text);
-  font-size: 16px;
   line-height: 1.6;
   background: #fff;
   border: 1px solid var(--border);
@@ -349,7 +369,6 @@ fs14 {
 .empathy-message {
   margin: 26px 0 0;
   color: var(--primary);
-  font-size: 18px;
   font-weight: 700;
   line-height: 1.6;
 }
@@ -375,7 +394,6 @@ fs14 {
   width: 44px;
   height: 44px;
   color: #fff;
-  font-size: 18px;
   font-weight: 800;
   background: var(--primary);
   border-radius: 14px;
@@ -383,12 +401,12 @@ fs14 {
 
 .benefit-card__content {
   flex: 1;
+  min-width: 0;
 }
 
 .benefit-card__title {
   margin-bottom: 6px;
   color: var(--text-strong);
-  font-size: 19px;
   font-weight: 800;
   letter-spacing: -0.3px;
 }
@@ -396,7 +414,6 @@ fs14 {
 .benefit-card__description {
   margin-bottom: 0;
   color: var(--text-muted);
-  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -420,10 +437,7 @@ fs14 {
 .difference-card--visual {
   grid-column: 1 / -1;
   display: grid;
-
-  /* 기존 150px 고정값 제거 */
   grid-template-columns: 42% minmax(0, 1fr);
-
   gap: 18px;
   align-items: stretch;
   min-width: 0;
@@ -435,7 +449,6 @@ fs14 {
   position: relative;
   align-self: stretch;
   min-width: 0;
-  min-height: 230px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -447,7 +460,6 @@ fs14 {
   inset: 0;
   display: block;
   width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -459,21 +471,6 @@ fs14 {
   padding: 18px 18px 18px 0;
 }
 
-@media (max-width: 420px) {
-  .difference-card--visual {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .difference-card--visual > div:last-child {
-    padding: 20px 18px;
-  }
-
-  .image-placeholder {
-    min-height: 220px;
-  }
-}
-
 .difference-card__check {
   display: flex;
   flex: none;
@@ -483,42 +480,21 @@ fs14 {
   height: 28px;
   color: #fff;
   font-weight: 800;
-  background: #0d63d6;
+  background: var(--primary);
   border-radius: 50%;
 }
 
 .difference-card__title {
   margin: 0 0 7px;
-  color: #2a2a2a;
-  font-size: 17px;
+  color: var(--text-strong);
   font-weight: 800;
   line-height: 1.45;
 }
 
 .difference-card__description {
   margin: 0;
-  color: #6b6b6b;
-  font-size: 14.5px;
+  color: var(--text-muted);
   line-height: 1.6;
-}
-
-@media (max-width: 390px) {
-  .difference-list {
-    grid-template-columns: 1fr;
-  }
-
-  .difference-card--visual {
-    grid-column: auto;
-    grid-template-columns: 1fr;
-  }
-
-  .difference-card--visual > div:last-child {
-    padding: 18px 18px;
-  }
-
-  .image-placeholder {
-    min-height: 150px;
-  }
 }
 
 .schedule-list {
@@ -534,14 +510,12 @@ fs14 {
   padding: 8px 18px;
   margin-bottom: 18px;
   color: #fff;
-  font-size: 16px;
   font-weight: 800;
   background: var(--primary);
   border-radius: 999px;
 }
 
 .schedule-day__badge-sub {
-  font-size: 14px;
   font-weight: 600;
   opacity: 0.85;
 }
@@ -577,14 +551,12 @@ fs14 {
 .timeline-item__time {
   margin-bottom: 3px;
   color: var(--primary);
-  font-size: 14px;
   font-weight: 800;
 }
 
 .timeline-item__title {
   margin-bottom: 2px;
   color: var(--text-strong);
-  font-size: 17px;
   font-weight: 700;
 }
 
@@ -595,14 +567,12 @@ fs14 {
 .timeline-item__description {
   margin-bottom: 0;
   color: var(--text-muted);
-  font-size: 15px;
   line-height: 1.55;
 }
 
 .dark-note {
   margin: 14px 0 0;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 13px;
   line-height: 1.6;
 }
 
@@ -641,11 +611,10 @@ fs14 {
 .ferry-card__caption,
 .include-card__title {
   padding: 12px 14px;
+  margin-bottom: 0;
   color: var(--text-strong);
-  font-size: 15px;
   font-weight: 700;
   line-height: 1.4;
-  margin-bottom: 0;
 }
 
 .food-list {
@@ -658,7 +627,6 @@ fs14 {
 .food-chip {
   padding: 9px 15px;
   color: var(--primary);
-  font-size: 15px;
   font-weight: 700;
   background: #fff;
   border: 1px solid #cfe0f7;
@@ -667,21 +635,6 @@ fs14 {
 
 .include-card__image {
   height: 120px;
-}
-
-.include-card__placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 120px;
-  background-image: repeating-linear-gradient(135deg, #d3e4fa 0 14px, #c2daf7 14px 28px);
-  border-bottom: 1px dashed #a8c8ef;
-}
-
-.include-card__placeholder span {
-  color: #3a6bb0;
-  font-family: ui-monospace, monospace;
-  font-size: 11px;
 }
 
 .not-included {
@@ -695,17 +648,16 @@ fs14 {
 .not-included__title {
   margin-bottom: 8px;
   color: var(--text-light);
-  font-size: 14px;
   font-weight: 800;
 }
 
 .not-included__copy {
   margin-bottom: 0;
   color: var(--text-muted);
-  font-size: 15px;
   line-height: 1.7;
 }
 
+/*가격 시작*/
 .price-card {
   padding: 32px 24px;
   background: #fff;
@@ -722,7 +674,6 @@ fs14 {
   display: inline-block;
   padding: 6px 14px;
   color: #1f5fb8;
-  font-size: 14px;
   font-weight: 800;
   white-space: nowrap;
   background: var(--primary-pale);
@@ -770,7 +721,6 @@ fs14 {
   left: 50%;
   padding: 4px 12px;
   color: #fff;
-  font-size: 12px;
   font-weight: 800;
   white-space: nowrap;
   background: var(--primary);
@@ -779,17 +729,7 @@ fs14 {
 }
 
 .price-option__label--regular {
-  position: absolute;
-    top: -12px;
-    left: 50%;
-    padding: 4px 12px;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 800;
-    white-space: nowrap;
-    background: var(--text-light);
-    border-radius: 999px;
-    transform: translateX(-50%);
+  background: var(--text-light);
 }
 
 .price-option__amount {
@@ -799,7 +739,6 @@ fs14 {
   min-height: 52px;
   margin-bottom: 10px;
   color: #5a6472;
-  font-size: clamp(21px, 6vw, 24px);
   font-weight: 800;
   letter-spacing: -1px;
   white-space: nowrap;
@@ -811,7 +750,6 @@ fs14 {
 
 .price-option__description {
   color: #9aa6b2;
-  font-size: 13px;
   font-weight: 600;
   line-height: 1.5;
 }
@@ -822,13 +760,25 @@ fs14 {
 }
 
 .price-card__included {
-  margin-bottom: 0;
+  margin-bottom: 22px;
   color: var(--primary-mid);
-  font-size: 15px;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
 }
+      /* 모바일 1열 배치 */
+@media (max-width: 480px) {
+  .price-options {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .price-option {
+    min-height: 136px;
+  }
+}
+
+/*가격 끝*/
 
 .room-notice {
   padding-top: 18px;
@@ -837,29 +787,9 @@ fs14 {
   border-top: 1px solid #e4ebf4;
 }
 
-.room-notice__title {
-  margin: 0 0 7px;
-  color: #8a97a6;
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.room-notice__primary {
-  margin: 0 0 4px;
-  color: #2a2a2a;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.room-notice__primary strong {
-  color: #0d63d6;
-}
-
 .room-notice__description {
   margin: 0;
-  color: #6b6b6b;
-  font-size: 13.5px;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -867,14 +797,17 @@ fs14 {
   padding: 30px 24px;
   margin-top: 24px;
   color: #fff;
-  background: linear-gradient(180deg, var(--primary) 0%, #1f5fb8 100%);
+  background: linear-gradient(
+    180deg,
+    var(--primary) 0%,
+    #1f5fb8 100%
+  );
   border-radius: 22px;
   box-shadow: 0 12px 30px rgba(13, 99, 214, 0.28);
 }
 
 .membership-card__title {
   margin-bottom: 8px;
-  font-size: 20px;
   font-weight: 800;
   letter-spacing: -0.4px;
 }
@@ -882,7 +815,6 @@ fs14 {
 .membership-card__description {
   margin-bottom: 22px;
   color: rgba(255, 255, 255, 0.92);
-  font-size: 16px;
   font-weight: 600;
   line-height: 1.6;
 }
@@ -908,14 +840,12 @@ fs14 {
   height: 22px;
   margin-top: 1px;
   color: #fff;
-  font-size: 13px;
   font-weight: 800;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 999px;
 }
 
 .membership-item__text {
-  font-size: 15px;
   line-height: 1.55;
 }
 
@@ -936,7 +866,6 @@ fs14 {
   width: 28px;
   height: 28px;
   color: #fff;
-  font-size: 16px;
   font-weight: 800;
   background: var(--primary);
   border-radius: 50%;
@@ -945,7 +874,6 @@ fs14 {
 .audience-card__text {
   flex: 1;
   color: var(--text);
-  font-size: 16px;
   font-weight: 600;
   line-height: 1.55;
 }
@@ -966,48 +894,50 @@ fs14 {
   align-items: center;
   width: 100%;
   padding: 20px 22px;
+  list-style: none;
   text-align: left;
   cursor: pointer;
   background: none;
   border: 0;
 }
 
+.faq-item__button::-webkit-details-marker {
+  display: none;
+}
+
 .faq-item__q {
   flex: none;
   color: var(--primary);
-  font-size: 18px;
   font-weight: 800;
 }
 
 .faq-item__question {
   flex: 1;
   color: var(--text-strong);
-  font-size: 17px;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: -0.3px;
 }
 
 .faq-item__arrow {
-  flex: none;
+  display: inline-flex;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
   color: #5b95e0;
-  font-size: 20px;
   transition: transform 0.2s;
 }
 
-.faq-item__button[aria-expanded="true"] .faq-item__arrow {
+.faq-item[open] .faq-item__arrow {
   transform: rotate(180deg);
 }
 
 .faq-item__answer {
   padding: 0 22px 22px 52px;
   color: var(--text-muted);
-  font-size: 16px;
   line-height: 1.65;
-}
-
-.faq-item__answer[hidden] {
-  display: none;
 }
 
 .travel-notice {
@@ -1021,7 +951,6 @@ fs14 {
 .travel-notice__title {
   margin-bottom: 12px;
   color: var(--text-light);
-  font-size: 13.5px;
   font-weight: 800;
 }
 
@@ -1035,20 +964,22 @@ fs14 {
 
 .travel-notice__list li {
   color: #7c8894;
-  font-size: 14px;
   line-height: 1.6;
 }
 
 .final-cta {
   padding: 56px 24px 64px;
   text-align: center;
-  background: linear-gradient(180deg, var(--primary-mid) 0%, var(--primary) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--primary-mid) 0%,
+    var(--primary) 100%
+  );
 }
 
 .final-cta__title {
   margin-bottom: 14px;
   color: #fff;
-  font-size: 26px;
   font-weight: 800;
   line-height: 1.45;
   letter-spacing: -0.4px;
@@ -1057,30 +988,52 @@ fs14 {
 .final-cta__copy {
   margin-bottom: 28px;
   color: rgba(255, 255, 255, 0.92);
-  font-size: 17px;
   line-height: 1.6;
 }
 
 .final-cta__note {
   margin: 26px 0 0;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 14px;
   line-height: 1.6;
 }
 
-@media (max-width: 390px) {
-  .section {
-    padding-right: 20px;
-    padding-left: 20px;
+@media (max-width: 420px) {
+  .difference-card--visual {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
+  .difference-card--visual > div:last-child {
+    padding: 20px 18px;
+  }
+
+  .image-placeholder {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 390px) {
+  .section,
   .hero {
     padding-right: 20px;
     padding-left: 20px;
   }
 
-  .hero__title {
-    font-size: 29px;
+  .difference-list {
+    grid-template-columns: 1fr;
+  }
+
+  .difference-card--visual {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .difference-card--visual > div:last-child {
+    padding: 18px;
+  }
+
+  .image-placeholder {
+    min-height: 150px;
   }
 
   .price-card {
@@ -1088,21 +1041,233 @@ fs14 {
     padding-left: 16px;
   }
 
-  .price-options {
-    gap: 8px;
-  }
-
   .price-option {
     padding-right: 4px;
     padding-left: 4px;
-  }
-
-  .price-option__amount {
-    font-size: 21px;
   }
 
   .membership-card {
     padding-right: 20px;
     padding-left: 20px;
   }
+}
+
+
+.final-cta-section {
+  background: linear-gradient(rgb(42, 111, 219) 0%, rgb(13, 99, 214) 100%);
+  padding: 56px 24px 64px;
+  text-align: center;
+}
+.final-cta-section__style-01 {
+  margin: 0px 0px 14px;
+  font-size: 26px;
+  line-height: 1.45;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  letter-spacing: -0.4px;
+}
+.final-cta-section__style-02 {
+  margin: 0px 0px 28px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+}
+.final-cta-section__style-03 {
+  width: 100%;
+  border-width: medium;
+  border-style: none;
+  border-color: currentcolor;
+  border-image: initial;
+  background: rgb(255, 255, 255);
+  color: rgb(13, 99, 214);
+  font-size: 19px;
+  font-weight: 800;
+  padding: 19px;
+  border-radius: 16px;
+  cursor: pointer;
+  letter-spacing: -0.3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 24px;
+  margin-bottom: 14px;
+}
+.final-cta-section__style-04 {
+  display: flex;
+  gap: 12px;
+}
+.final-cta-section__style-05 {
+  flex: 1 1 0%;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.final-cta-section__style-06 {
+  margin: 26px 0px 0px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.pricing-section__style-02 {
+  margin: 0px 0px 22px;
+  background: rgb(255, 77, 79);
+  color: rgb(255, 255, 255);
+  border-radius: 14px;
+  padding: 14px 18px;
+  text-align: center;
+  box-shadow: rgba(255, 77, 79, 0.28) 0px 8px 20px;
+}
+.pricing-section__style-03 {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+}
+
+/* 멤버십 안내 카드 */
+.membership-promo {
+  margin-top: 24px;
+  padding: 30px 24px;
+  color: #fff;
+  background: linear-gradient(#0d63d6 0%, #1f5fb8 100%);
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(13, 99, 214, 0.28);
+}
+
+.membership-promo__title {
+  margin: 0 0 8px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.membership-promo__intro {
+  margin: 0 0 22px;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.membership-promo__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.membership-promo__benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.membership-promo__check {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  color: #fff;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.membership-promo__benefit-text {
+  line-height: 1.55;
+}
+
+.membership-promo__quote {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  color: rgba(255, 255, 255, 0.95);
+  font-style: italic;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.12);
+  border-left: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 0 10px 10px 0;
+}
+
+.membership-promo__note {
+  margin: 0 0 22px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.membership-promo__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 16px;
+  color: #0d63d6;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 14px;
+}
+
+/* 멤버십 바로가기 */
+.membership-shortcut {
+  margin-bottom: 18px;
+  padding: 18px;
+  text-align: center;
+  background: #f4f8ff;
+  border: 1px solid #b8d4f7;
+  border-radius: 16px;
+}
+
+.membership-shortcut__text {
+  margin: 0 0 12px;
+  color: #3a3a3a;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.membership-shortcut__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 16px;
+  color: #0d63d6;
+  font-weight: 800;
+  line-height: 1.3;
+  text-decoration: none;
+  background: #fff;
+  border: 2px solid #0d63d6;
+  border-radius: 14px;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.membership-shortcut__link:hover,
+.membership-shortcut__link:focus-visible {
+  color: #fff;
+  background: #0d63d6;
+}
+
+/* 예약 버튼 */
+.booking-button {
+  width: 100%;
+  padding: 19px;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  cursor: pointer;
+  background: #0d63d6;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(13, 99, 214, 0.28);
 }
